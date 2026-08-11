@@ -99,6 +99,18 @@ export const experiences: Experience[] = [
     created_at: '',
     updated_at: '',
   },
+  {
+    id: 'ppm-sman-3-tegal',
+    company: 'SMAN 3 Tegal',
+    role: 'Pengabdian kepada Masyarakat (PPM)',
+    role_en: 'Community Service Program (PPM)',
+    description: 'Mengenalkan dasar-dasar pengembangan web serta mengajarkan praktik dasar HTML dan CSS kepada siswa SMAN 3 Tegal.',
+    description_en: 'Introduced the fundamentals of web development and taught basic HTML and CSS practices to students at SMAN 3 Tegal.',
+    tech_stack: ['HTML', 'CSS', 'Web Development'],
+    sort_order: 2,
+    created_at: '',
+    updated_at: '',
+  },
 ]
 
 export const educations: Education[] = [
@@ -114,5 +126,6 @@ export const educations: Education[] = [
     institution: 'SMA Negeri 3 Slawi',
     program: 'Sekolah Menengah Atas',
     program_en: 'Senior High School',
+    period: '2019 — 2022',
   },
 ]

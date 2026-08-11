@@ -71,7 +71,7 @@ export interface Experience {
   company: string
   role: string
   role_en?: string
-  start_date: string
+  start_date?: string
   end_date?: string
   description: string
   description_en?: string

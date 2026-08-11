@@ -32,9 +32,11 @@ export default function ExperienceSection() {
                   <div className="rounded-xl border-2 border-black bg-white p-6 shadow-brutal">
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                       <h3 className="text-xl font-bold">{language === 'en' ? exp.role_en || exp.role : exp.role}</h3>
-                      <span className="rounded-full border-2 border-black bg-accent/10 px-3 py-1 text-xs font-bold">
-                        {exp.start_date} — {exp.end_date || 'Present'}
-                      </span>
+                      {(exp.start_date || exp.end_date) && (
+                        <span className="rounded-full border-2 border-black bg-accent/10 px-3 py-1 text-xs font-bold">
+                          {exp.start_date}{exp.start_date && exp.end_date ? ' — ' : ''}{exp.end_date || (exp.start_date ? text('Sekarang', 'Present') : '')}
+                        </span>
+                      )}
                     </div>
                     <p className="text-base font-semibold text-accent mb-3">{exp.company}</p>
                     <p className="text-sm leading-relaxed text-gray-700">{language === 'en' ? exp.description_en || exp.description : exp.description}</p>
