@@ -81,6 +81,14 @@ export interface Experience {
   updated_at: string
 }
 
+export interface Education {
+  id: string
+  institution: string
+  program: string
+  program_en: string
+  period?: string
+}
+
 export interface Profile {
   id: string
   display_name: string

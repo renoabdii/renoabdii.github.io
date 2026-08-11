@@ -1,4 +1,4 @@
-import type { Experience, Profile, Project, Skill } from '../types'
+import type { Education, Experience, Profile, Project, Skill } from '../types'
 
 export const profile: Profile = {
   id: 'reno-abdi-gustian',
@@ -98,5 +98,21 @@ export const experiences: Experience[] = [
     sort_order: 1,
     created_at: '',
     updated_at: '',
+  },
+]
+
+export const educations: Education[] = [
+  {
+    id: 'universitas-harkat-negeri',
+    institution: 'Universitas Harkat Negeri',
+    program: 'Teknik Informatika',
+    program_en: 'Informatics Engineering',
+    period: '2022 — 2026',
+  },
+  {
+    id: 'sma-negeri-3-slawi',
+    institution: 'SMA Negeri 3 Slawi',
+    program: 'Sekolah Menengah Atas',
+    program_en: 'Senior High School',
   },
 ]
