@@ -21,19 +21,6 @@ export interface Project {
   updated_at: string
 }
 
-export interface Blog {
-  id: string
-  title: string
-  slug: string
-  content: string
-  excerpt?: string
-  cover_image?: string
-  tags: string[]
-  status: 'draft' | 'published'
-  created_at: string
-  updated_at: string
-}
-
 export interface Skill {
   id: string
   skill_name: string
@@ -41,28 +28,6 @@ export interface Skill {
   proficiency_level: number
   icon_url?: string
   sort_order: number
-  created_at: string
-}
-
-export interface Review {
-  id: string
-  name: string
-  role: string
-  role_en?: string
-  content: string
-  avatar_url?: string
-  rating: number
-  status: 'draft' | 'published'
-  sort_order: number
-  created_at: string
-}
-
-export interface Message {
-  id: string
-  name: string
-  email: string
-  message: string
-  read_status: boolean
   created_at: string
 }
 
