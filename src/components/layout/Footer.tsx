@@ -42,7 +42,7 @@ export default function Footer() {
             <div className="mt-5 flex gap-3">
               {profile.github_url && <a href={profile.github_url} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-white bg-white text-lg text-black transition-transform hover:-translate-y-1 hover:bg-sunshine"><FaGithub /></a>}
               {profile.linkedin_url && <a href={profile.linkedin_url} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-white bg-accent text-lg transition-transform hover:-translate-y-1 hover:bg-sunshine hover:text-black"><FaLinkedin /></a>}
-              {profile.email && <a href={`mailto:${profile.email}`} aria-label="Email" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-white bg-coral text-lg text-black transition-transform hover:-translate-y-1 hover:bg-sunshine"><FaEnvelope /></a>}
+              {profile.email && <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`} target="_blank" rel="noopener noreferrer" aria-label="Email" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-white bg-coral text-lg text-black transition-transform hover:-translate-y-1 hover:bg-sunshine"><FaEnvelope /></a>}
               {profile.phone && <a href={`https://wa.me/${profile.phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-white bg-mint text-lg text-black transition-transform hover:-translate-y-1 hover:bg-sunshine"><FaWhatsapp /></a>}
             </div>
           </div>
@@ -61,11 +61,11 @@ export default function Footer() {
           <div>
             <h2 className="font-heading text-lg font-black text-sunshine">{text('Mari Terhubung', 'Get In Touch')}</h2>
             <div className="mt-4 space-y-4 text-sm text-gray-300 sm:text-base">
-              {profile.email && <a href={`mailto:${profile.email}`} className="flex items-start gap-3 break-all transition-colors hover:text-white"><FaEnvelope className="mt-1 shrink-0 text-coral" /><span>{profile.email}</span></a>}
+              {profile.email && <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 break-all transition-colors hover:text-white"><FaEnvelope className="mt-1 shrink-0 text-coral" /><span>{profile.email}</span></a>}
               {profile.phone && <a href={`https://wa.me/${profile.phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 transition-colors hover:text-white"><FaWhatsapp className="mt-1 shrink-0 text-mint" /><span>{profile.phone}</span></a>}
               {profile.location && <p className="flex items-start gap-3"><FaMapMarkerAlt className="mt-1 shrink-0 text-mint" /><span>{profile.location}</span></p>}
             </div>
-            <a href={`mailto:${profile.email}?subject=Portfolio inquiry`} className="mt-6 inline-block rounded-lg border-2 border-white bg-sunshine px-4 py-2 font-heading text-sm font-black text-black shadow-[4px_4px_0_#4f46e5] transition-transform hover:-translate-y-1">
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block rounded-lg border-2 border-white bg-sunshine px-4 py-2 font-heading text-sm font-black text-black shadow-[4px_4px_0_#4f46e5] transition-transform hover:-translate-y-1">
               {text('Kirim Pesan', 'Send a Message')} →
             </a>
           </div>

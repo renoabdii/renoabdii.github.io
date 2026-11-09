@@ -4,33 +4,39 @@ import type { Skill } from '../../types'
 import SectionTitle from '../shared/SectionTitle'
 import Reveal from '../shared/Reveal'
 import { useLanguage } from '../../contexts/LanguageContext'
-import { FaCode, FaDatabase, FaLayerGroup, FaTools } from 'react-icons/fa'
+import { FaCode, FaDatabase, FaLayerGroup, FaTools, FaCloud } from 'react-icons/fa'
 
-const primarySkills = new Set(['javascript', 'typescript', 'react', 'tailwind'])
+const primarySkills = new Set(['javascript', 'typescript', 'react', 'tailwind', 'mongodb', 'rest-api'])
 
 const categoryMeta = {
   Frontend: {
     icon: FaLayerGroup,
-    label: ['Frontend', 'Frontend'],
-    description: ['Membangun antarmuka web yang responsif dan mudah digunakan.', 'Building responsive and user-friendly web interfaces.'],
+    label: ['Frontend & UI', 'Frontend & UI'],
+    description: ['Membangun antarmuka web yang responsif, terstruktur, dan interaktif.', 'Building responsive, structured, and interactive web interfaces.'],
     color: 'bg-primary',
   },
   Backend: {
     icon: FaCode,
-    label: ['Backend', 'Backend'],
-    description: ['Mengembangkan logika aplikasi dan pengolahan data.', 'Developing application logic and data processing.'],
+    label: ['Backend & Integrasi', 'Backend & Integration'],
+    description: ['Mengembangkan logika server, REST API, dan integrasi webhook.', 'Developing server logic, REST APIs, and webhook integrations.'],
     color: 'bg-secondary',
   },
   Database: {
     icon: FaDatabase,
     label: ['Database', 'Database'],
-    description: ['Mengelola dan menyusun data aplikasi secara terstruktur.', 'Managing and organizing application data effectively.'],
+    description: ['Penyimpanan dan manajemen data berbasis NoSQL dan relasional.', 'Data storage and management across NoSQL and relational databases.'],
     color: 'bg-accent',
+  },
+  DevOps: {
+    icon: FaCloud,
+    label: ['Deployment & Cloud', 'Deployment & Cloud'],
+    description: ['Infrastruktur cloud, hosting, dan pengelolaan domain aplikasi.', 'Cloud infrastructure, hosting, and application domain management.'],
+    color: 'bg-yellow-300',
   },
   Other: {
     icon: FaTools,
-    label: ['Tools', 'Tools'],
-    description: ['Perangkat pendukung untuk desain dan kolaborasi kode.', 'Supporting tools for design and code collaboration.'],
+    label: ['Tools & Workflow', 'Tools & Workflow'],
+    description: ['Perangkat pengembangan kode, testing, pengujian API, dan desain.', 'Development, testing, API testing, and design tools.'],
     color: 'bg-green-400',
   },
 } as const

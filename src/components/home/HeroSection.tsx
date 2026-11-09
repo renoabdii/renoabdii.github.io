@@ -42,13 +42,18 @@ export default function HeroSection() {
           </p>
           <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-slate-600 md:mx-0 sm:text-lg">
             {text(
-              'Mahasiswa Teknik Informatika dengan pengalaman magang sebagai Frontend Web Developer dan fokus pada pengembangan website responsif.',
-              'An Informatics Engineering student with Frontend Web Developer internship experience and a focus on responsive web development.'
+              'Lulusan D4 Teknik Informatika & Frontend Developer yang berfokus membangun aplikasi web modern dengan React, TypeScript, dan Tailwind CSS. Berpengalaman mengembangkan CMS, integrasi API, hingga sistem Point of Sale.',
+              'Informatics Engineering graduate & Frontend Developer focused on building modern web apps with React, TypeScript, and Tailwind CSS. Experienced in CMS development, API integrations, and Point of Sale systems.'
             )}
           </p>
 
           <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap sm:justify-center md:justify-start">
-            <a href={`mailto:${profile.email}`} className="w-full sm:w-auto">
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
               <Button variant="accent" className="w-full sm:w-auto"><FaEnvelope />{text('Hubungi Saya', 'Contact Me')}</Button>
             </a>
             <Button variant="outline" onClick={scrollToExperience} className="w-full sm:w-auto">
@@ -60,7 +65,15 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-            <a href={`mailto:${profile.email}`} aria-label="Email" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-black bg-white text-lg shadow-[3px_3px_0_#0a0a0a] transition-transform hover:-translate-y-1"><FaEnvelope /></a>
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+              className="grid h-10 w-10 place-items-center rounded-lg border-2 border-black bg-white text-lg shadow-[3px_3px_0_#0a0a0a] transition-transform hover:-translate-y-1"
+            >
+              <FaEnvelope />
+            </a>
             {profile.linkedin_url && <a href={profile.linkedin_url} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-black bg-accent text-lg text-white shadow-[3px_3px_0_#0a0a0a] transition-transform hover:-translate-y-1"><FaLinkedin /></a>}
             {profile.github_url && <a href={profile.github_url} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-black bg-black text-lg text-white shadow-[3px_3px_0_#0a0a0a] transition-transform hover:-translate-y-1"><FaGithub /></a>}
             {profile.phone && <a href={`https://wa.me/${profile.phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="grid h-10 w-10 place-items-center rounded-lg border-2 border-black bg-mint text-lg text-black shadow-[3px_3px_0_#0a0a0a] transition-transform hover:-translate-y-1"><FaWhatsapp /></a>}

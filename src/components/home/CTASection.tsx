@@ -17,7 +17,11 @@ export default function CTASection() {
             {text('Punya proyek yang ingin diwujudkan? Mari membangun sesuatu yang menarik bersama.', "Have a project in mind? Let's build something amazing together.")}
           </p>
           <div className="relative mt-8">
-            <a href={`mailto:${profile.email}?subject=Portfolio inquiry`}>
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="accent" size="lg" className="w-full sm:w-auto">{text('Kirim Email', 'Email Me')}</Button>
             </a>
           </div>
